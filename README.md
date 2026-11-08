@@ -87,3 +87,6 @@ src/
 - [ ] Экспорт / импорт данных в JSON
 - [ ] Статистика: процент выполнения за период
 - [ ] Синхронизация между устройствами (Supabase / Firebase)
+
+<img width="772" height="510" alt="Снимок экрана 2026-11-08 190713" src="https://github.com/user-attachments/assets/254c7cf6-e5dc-4196-830d-d8b5941d1bc8" /> <img width="806" height="499" alt="Снимок экрана 2026-11-08 190728" src="https://github.com/user-attachments/assets/01176bf4-701a-412a-bb12-e8e2bf305907" />
+
