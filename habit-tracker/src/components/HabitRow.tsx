@@ -16,7 +16,7 @@ export function HabitRow({ habit, daysCount, onToggle, onRemove, onRename }: Pro
     );
 
     return (
-        <div className="border rounded p-4 md-3">
+        <div className="border rounded p-4 mb-3 dark:border-gray-700">
             <div className="flex justify-between items-center mb-3">
                 <HabitTitle
                     name={habit.name}
@@ -43,7 +43,7 @@ export function HabitRow({ habit, daysCount, onToggle, onRemove, onRename }: Pro
                             className={`w-8 h-8 rounded text-xs ${
                                 done
                                     ? 'bg-green-500 text-white'
-                                    : 'bg-gray-200 hover:bg-gray-300'
+                                    : 'bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600'
                             } ${ today ? 'ring-2 ring-red-500 ring-offset-1' : ''}`}                       
                             >
                             {format(date, 'd')}

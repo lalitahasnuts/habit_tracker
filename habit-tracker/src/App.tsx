@@ -3,6 +3,7 @@ import { AddHabitForm } from './components/AddHabitForm';
 import { HabitRow } from './components/HabitRow';
 import { getCurrentStreak } from './utils/streak';
 import { useState } from 'react';
+import { useTheme } from './hooks/useTheme';
 
 type Period = 7 | 14 | 30;
 const PERIODS: Period[] = [7, 14, 30];
@@ -10,10 +11,20 @@ const PERIODS: Period[] = [7, 14, 30];
 function App() {
   const { habits, addHabit, removeHabit, toggleCompletion, renameHabit } = useHabits();
   const [period, setPeriod] = useState<Period>(14);
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <div className="max-w-2xl mx-auto p-6">
-      <h1 className="text-2xl font-bold mb-6">Трекер привычек</h1>
+      <div className="flex justify-between items-center mb-6">
+      <h1 className="text-2xl font-bold">Трекер привычек</h1>
+        <button
+          onClick={toggleTheme}
+          className="text-2xl"
+          title="Переключить тему"
+        >
+          {theme === 'dark' ? '☀️' : '🌙'}
+        </button>
+    </div>
 
       <AddHabitForm onAdd={addHabit} />
 
@@ -22,14 +33,14 @@ function App() {
           <button
             key={p}
             onClick={() => setPeriod(p)}
-            className={`px-3 py-1 rounded text-sm ${
+            className={`px-3 py-1 rounded text-sm transition-colors ${
               period === p
-                ? 'bg-blue-600 text-white'
-                : 'bg-gray-200 hover:bg-gray-300'
+                ? 'bg-amber-600 text-white hover:bg-amber-700'
+                : 'bg-amber-100 text-amber-900 hover:bg-amber-200 dark:bg-gray-700 dark:text-gray-100 dark:hover:bg-gray-600'
             }`}
           >
             {p} дней
-          </button>
+        </button>
         )}
       </div>
 
