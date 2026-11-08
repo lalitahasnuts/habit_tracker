@@ -21,6 +21,15 @@ export function useHabits() {
         setHabits((prev) => prev.filter((h) => h.id !== id));
     };
 
+    const renameHabit = (id: string, name: string) => {
+        const trimmed = name.trim();
+        if (!trimmed) return;
+
+        setHabits((prev) =>
+            prev.map((h) => (h.id === id ? { ...h, name: trimmed} : h))
+        );
+    };
+
     const toggleCompletion = (habitId: string, date: string) => {
         setHabits((prev) => 
             prev.map((h) => {
@@ -34,5 +43,5 @@ export function useHabits() {
         );
     };
 
-    return { habits, addHabit, removeHabit, toggleCompletion }
+    return { habits, addHabit, removeHabit, renameHabit, toggleCompletion }
 }
