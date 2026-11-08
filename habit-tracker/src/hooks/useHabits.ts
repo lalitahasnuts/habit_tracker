@@ -43,5 +43,9 @@ export function useHabits() {
         );
     };
 
-    return { habits, addHabit, removeHabit, renameHabit, toggleCompletion }
+    const replaceHabits = (newHabits: Habit[]) => {
+        setHabits(newHabits);
+    };
+
+    return { habits, addHabit, removeHabit, renameHabit, toggleCompletion, replaceHabits }
 }
