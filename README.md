@@ -88,5 +88,6 @@ src/
 - [ ] Статистика: процент выполнения за период
 - [ ] Синхронизация между устройствами (Supabase / Firebase)
 
-<img width="772" height="510" alt="Снимок экрана 2026-11-08 190713" src="https://github.com/user-attachments/assets/254c7cf6-e5dc-4196-830d-d8b5941d1bc8" />
+<img width="757" height="524" alt="image" src="https://github.com/user-attachments/assets/51e2b443-55d5-4176-92fd-1b0d82b36e66" />
+
 
