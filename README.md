@@ -65,32 +65,24 @@ npm run dev
 - **Backend / База данных:** Supabase (PostgreSQL, Auth, Realtime)
 - **date-fns** — работа с датами (форматирование, вычисление streak)
 
-## Структура проекта
-
-```
-src/
-├── components/
-│   ├── AddHabitForm.tsx    # Форма добавления привычки
-│   ├── HabitRow.tsx        # Строка привычки с сеткой дней
-│   └── HabitTitle.tsx      # Название с inline-редактированием
-├── hooks/
-│   ├── useLocalStorage.ts  # Generic-хук для синхронизации с localStorage
-│   └── useHabits.ts        # Бизнес-логика: add / remove / rename / toggle
-├── utils/
-│   └── streak.ts           # Подсчёт текущей серии
-├── types.ts                # Общие типы (Habit)
-├── App.tsx                 # Корневой компонент
-├── main.tsx                # Точка входа
-└── index.css               # @import "tailwindcss" + базовые стили
-```
-
 ### Хранение
 
-Все привычки хранятся в одном ключе `localStorage` под именем `habits`. Синхронизация инкапсулирована в хуке `useLocalStorage<T>`.
+Все привычки хранятся в Supabase.
 
-## Планы
+### Схема базы данных (Supabase)
+Проект использует таблицу habits со следующими полями:
 
-- [ ] Написать тесты (Vitest + Testing Library) на `getCurrentStreak` и хуки
+```
+id (uuid, primary key)
+
+user_id (uuid, references auth.users)
+
+name (text)
+
+created_at (timestamptz)
+
+completions (jsonb) — объект с отметками по дням в формате { "2026-11-09": true }.
+```
 
 <img width="707" height="413" alt="image" src="https://github.com/user-attachments/assets/7c0d90b5-057e-4b38-bdf8-736329c6a213" />
 
