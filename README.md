@@ -18,6 +18,7 @@
 -  Адаптивная вёрстка на Tailwind CSS
 -  Тёмная/светлая темы
 -  Экспорт / импорт данных в JSON
+-  Статистика: процент выполнения за период
 
 ## Запуск локально
 
@@ -85,9 +86,9 @@ src/
 ## Планы
 
 - [ ] Написать тесты (Vitest + Testing Library) на `getCurrentStreak` и хуки
-- [ ] Статистика: процент выполнения за период
 - [ ] Синхронизация между устройствами (Supabase / Firebase)
 
-<img width="757" height="524" alt="image" src="https://github.com/user-attachments/assets/51e2b443-55d5-4176-92fd-1b0d82b36e66" />
+<img width="720" height="565" alt="image" src="https://github.com/user-attachments/assets/0702f009-b2c4-4fe5-b472-72b86d887059" />
+
 
 
