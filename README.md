@@ -92,7 +92,8 @@ src/
 
 - [ ] Написать тесты (Vitest + Testing Library) на `getCurrentStreak` и хуки
 
-<img width="720" height="565" alt="image" src="https://github.com/user-attachments/assets/0702f009-b2c4-4fe5-b472-72b86d887059" />
+<img width="707" height="413" alt="image" src="https://github.com/user-attachments/assets/7c0d90b5-057e-4b38-bdf8-736329c6a213" />
+
 
 
 
