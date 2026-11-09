@@ -14,7 +14,7 @@
 -  Подсчёт текущей серии (streak) с «мягким» сбросом: если сегодня ещё не отмечено, серия не обнуляется
 -  Переименование привычки по двойному клику (Enter — сохранить, Esc — отменить)
 -  Удаление привычек
--  Автосохранение в `localStorage` — данные не теряются при перезагрузке
+-  Синхронизация между устройствами Supabase
 -  Адаптивная вёрстка на Tailwind CSS
 -  Тёмная/светлая темы
 -  Экспорт / импорт данных в JSON
@@ -37,6 +37,10 @@ cd habit-tracker
 # установи зависимости
 npm install
 
+# cоздай файл .env.local в корне проекта и добавь свои ключи Supabase:
+VITE_SUPABASE_URL=твой_project_url
+VITE_SUPABASE_PUBLISHABLE_KEY=твой_publishable_key
+
 # запусти dev-сервер
 npm run dev
 ```
@@ -58,6 +62,7 @@ npm run dev
 - **TypeScript** — статическая типизация
 - **Vite** — сборщик и dev-сервер
 - **Tailwind CSS v4** — утилитарные стили (через `@tailwindcss/vite`)
+- **Backend / База данных:** Supabase (PostgreSQL, Auth, Realtime)
 - **date-fns** — работа с датами (форматирование, вычисление streak)
 
 ## Структура проекта
@@ -86,7 +91,6 @@ src/
 ## Планы
 
 - [ ] Написать тесты (Vitest + Testing Library) на `getCurrentStreak` и хуки
-- [ ] Синхронизация между устройствами (Supabase / Firebase)
 
 <img width="720" height="565" alt="image" src="https://github.com/user-attachments/assets/0702f009-b2c4-4fe5-b472-72b86d887059" />
 
